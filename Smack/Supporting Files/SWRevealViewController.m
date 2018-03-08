@@ -1592,7 +1592,7 @@ const int FrontViewPositionNone = 0xff;
     void (^deploymentCompletion)() =
         [self _deploymentForViewController:_rightViewController inView:_contentView.rightView appear:appear disappear:disappear];
     
-    void (^completion)() = ^()
+    void (^completion)(void) = ^()
     {
         deploymentCompletion();
         if ( disappear )
